@@ -1,0 +1,1 @@
+python regre_test.py -M './results/regression/myModel1R.pt' -I './smiles.txt' -O './results/regression/myTest.txt'

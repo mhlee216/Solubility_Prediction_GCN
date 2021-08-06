@@ -1,0 +1,5 @@
+Solute SMILES	Solvent SMILES	Class
+C=CC(=O)N	O	High
+C=CC(=O)N	CC(=O)C	High
+CCCC1=CC=CC=C1	O	Low
+CCCC1=CC=CC=C1	CC(=O)C	High
