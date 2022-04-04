@@ -30,16 +30,16 @@ class GCNlayer(nn.Module):
         self.conv = conv
         
         if self.conv == 'GCNConv':
-            self.conv1 = GCNConv(self.n_features, self.conv_dim1, cached=False)
+            self.conv1 = GCNConv(self.n_features, self.conv_dim1)
             nn.init.xavier_uniform_(self.conv1.weight)
             self.bn1 = BatchNorm1d(self.conv_dim1)
-            self.conv2 = GCNConv(self.conv_dim1, self.conv_dim2, cached=False)
+            self.conv2 = GCNConv(self.conv_dim1, self.conv_dim2)
             nn.init.xavier_uniform_(self.conv2.weight)
             self.bn2 = BatchNorm1d(self.conv_dim2)
-            self.conv3 = GCNConv(self.conv_dim2, self.conv_dim3, cached=False)
+            self.conv3 = GCNConv(self.conv_dim2, self.conv_dim3)
             nn.init.xavier_uniform_(self.conv3.weight)
             self.bn3 = BatchNorm1d(self.conv_dim3)
-            self.conv4 = GCNConv(self.conv_dim3, self.concat_dim, cached=False)
+            self.conv4 = GCNConv(self.conv_dim3, self.concat_dim)
             nn.init.xavier_uniform_(self.conv4.weight)
             self.bn4 = BatchNorm1d(self.concat_dim)
             
