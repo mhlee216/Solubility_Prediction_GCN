@@ -56,7 +56,7 @@ print('- Device :', device)
 print()
 
 
-df = pd.read_excel(args.input_path, engine='openpyxl')
+df = pd.read_csv(args.input_path)
 df = pd.concat([df[args.solute_smiles], df[args.solvent_smiles], df[args.logS]], axis=1)
 df.columns = ['Solute SMILES', 'Solvent SMILES', 'logS']
 df = df.dropna(axis=0).reset_index(drop=True)
