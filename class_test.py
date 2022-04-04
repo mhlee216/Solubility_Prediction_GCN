@@ -38,7 +38,7 @@ def test_only(model, device, data_test, args):
             output = model(solute, solvent, device)
     return output
 
-test_df = pd.read_csv(args.input_path, sep='\t')
+test_df = pd.read_csv(args.input_path)
 test_df['Class'] = 0
 
 test_mols1_key, test_mols2_key, test_mols_value = make_class_mol(test_df)
